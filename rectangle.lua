@@ -7,7 +7,10 @@ function Rectangle:new(x, y, width, height)
 end
 
 
-function Rectangle:draw()
-  love.graphics.rectangle("line", self.x, self.y, self.width, self.height)
+function Rectangle:draw(mode)
+  if mode == nil then
+    mode = "line"
+  end
+  love.graphics.rectangle(mode, self.x, self.y, self.width, self.height)
 end
 
