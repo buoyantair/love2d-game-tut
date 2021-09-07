@@ -8,6 +8,15 @@ local listOfRectangles = {}
 
 function love.load()
   tick = require "tick"
+  Object = require "classic"
+  require "shape"
+  require "rectangle"
+  require "circle"
+  
+  r1 = Rectangle(100, 100, 200, 50)
+  r2 = Rectangle(350, 80, 25, 140)
+  c1 = Circle(100, 150, 40)
+  
   x = 100
   velocity = 100
   
@@ -35,7 +44,9 @@ function love.update(dt)
   end
   
   tick.update(dt)
-
+  r1:update(dt)
+  r2:update(dt)
+  c1:update(dt)
 end
 
 function love.draw()
@@ -53,6 +64,10 @@ function love.draw()
   if drawRectangle then
     love.graphics.rectangle("fill", 100, 100, 300, 200)
   end
+  
+  r1:draw()
+  r2:draw()
+  c1:draw()
 end
 
 function love.quit()

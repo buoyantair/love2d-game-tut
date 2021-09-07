@@ -1,0 +1,8 @@
+{
+  "Lua.workspace.library": [
+    "/Users/alicekile/dev/love2d-game-tut/love.app"
+  ],
+  "Lua.diagnostics.globals": [
+    "love"
+  ],
+}
